@@ -1,13 +1,17 @@
+package demo;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class YoutubeSikuli {
 
 	public static void main(String[] args) throws FindFailed {
-		System.setProperty("webdriver.chrome.driver", "C:/driver/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.youtube.com/watch?v=07R_gvjIjdA");
